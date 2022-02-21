@@ -6,7 +6,7 @@ import Foundation
 class AppDataStorage: ObservableObject {
     
     
-    var appData: AppData? = nil
+    @Published var appData: AppData! = nil
     
     
     static let baseFilePath = FileManager.default.currentDirectoryPath.appending("/appdata.json")
@@ -17,7 +17,7 @@ class AppDataStorage: ObservableObject {
     
     func loadAppData() {
         
-        self.appData = try? JSONDecoder().decode(AppData.self, from: Data(contentsOf: Self.fileUrl))
+        self.appData = (try? JSONDecoder().decode(AppData.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData()
         self.persistAppData(to: Self.backupFileUrl)
     }
 
@@ -26,5 +26,12 @@ class AppDataStorage: ObservableObject {
         
         try! JSONEncoder().encode(appData).write(to: url)
         print("Saved app data to \(url)")
+    }
+    
+    
+    func addNewOrder(_ order: Order) {
+        
+        self.appData.orders.append(order)
+        self.persistAppData()
     }
 }

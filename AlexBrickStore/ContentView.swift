@@ -11,17 +11,30 @@ struct ContentView: View {
     
     var body: some View {
         
-        let orders = appDataStorage.appData?.orders ?? []
-        if orders.isEmpty {
-            
-            Text("No orders")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-        } else {
+        VStack {
         
-            ForEach(appDataStorage.appData?.orders ?? []) { order in
+            Button(action: {
+                
+                let newOrder = Order(id: "new")
+                appDataStorage.addNewOrder(newOrder)
+                
+            }, label: {
+                
+                Text("Add order")
+            })
             
-                Text(order.id)
+            let orders = appDataStorage.appData?.orders ?? []
+            if orders.isEmpty {
+                
+                Text("No orders")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+            } else {
+            
+                ForEach(appDataStorage.appData?.orders ?? []) { order in
+                
+                    Text(order.id)
+                }
             }
         }
     }
