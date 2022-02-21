@@ -8,6 +8,9 @@ struct ContentView: View {
     
     @EnvironmentObject var appDataStorage: AppDataStorage
     
+    @State var sheetPresented = false
+    @State var editOrderId = ""
+    
     
     var body: some View {
         
@@ -15,8 +18,7 @@ struct ContentView: View {
         
             Button(action: {
                 
-                let newOrder = Order(id: "new")
-                appDataStorage.addNewOrder(newOrder)
+                self.sheetPresented = true
                 
             }, label: {
                 
@@ -36,6 +38,33 @@ struct ContentView: View {
                     Text(order.id)
                 }
             }
+        }
+        .sheet(isPresented: self.$sheetPresented) {
+            
+            TextField("Order id", text: self.$editOrderId)
+            
+            Button(action: {
+                
+                let newOrder = Order(id: self.editOrderId)
+                appDataStorage.addNewOrder(newOrder)
+                
+                self.sheetPresented = false
+                self.editOrderId = ""
+                
+            }, label: {
+                
+                Text("Add")
+            })
+            
+            Button(action: {
+                
+                self.sheetPresented = false
+                self.editOrderId = ""
+                
+            }, label: {
+                
+                Text("Cancel")
+            })
         }
     }
 }
