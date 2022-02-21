@@ -9,7 +9,9 @@ struct MainView: View {
     @EnvironmentObject var appDataStorage: AppDataStorage
     
     @State var sheetPresented = false
+    
     @State var editOrderId = ""
+    @State var editOrderTotalItems = ""
     
     
     var body: some View {
@@ -47,10 +49,11 @@ struct MainView: View {
         .sheet(isPresented: self.$sheetPresented) {
             
             TextField("Order id", text: self.$editOrderId)
+            TextField("Total items", text: self.$editOrderTotalItems)
             
             Button(action: {
                 
-                let newOrder = Order(id: self.editOrderId)
+                let newOrder = Order(id: self.editOrderId, totalItems: self.editOrderTotalItems)
                 appDataStorage.saveOrder(newOrder)
                 
                 self.sheetPresented = false
