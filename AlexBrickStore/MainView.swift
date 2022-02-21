@@ -51,7 +51,7 @@ struct MainView: View {
             Button(action: {
                 
                 let newOrder = Order(id: self.editOrderId)
-                appDataStorage.addNewOrder(newOrder)
+                appDataStorage.saveOrder(newOrder)
                 
                 self.sheetPresented = false
                 self.editOrderId = ""
