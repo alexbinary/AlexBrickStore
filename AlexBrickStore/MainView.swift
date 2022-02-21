@@ -8,11 +8,6 @@ struct MainView: View {
     
     @EnvironmentObject var appDataStorage: AppDataStorage
     
-    @State var sheetPresented = false
-    
-    @State var editOrderId = ""
-    @State var editOrderTotalItems = ""
-    
     
     var body: some View {
         
@@ -20,14 +15,7 @@ struct MainView: View {
             
             VStack {
         
-                Button(action: {
-                    
-                    self.sheetPresented = true
-                    
-                }, label: {
-                    
-                    Text("Add order")
-                })
+                NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "")))
                 
                 let orders = appDataStorage.appData?.orders ?? []
                 if orders.isEmpty {
@@ -46,36 +34,6 @@ struct MainView: View {
             VStack {}
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .sheet(isPresented: self.$sheetPresented) {
-            
-            TextField("Order id", text: self.$editOrderId)
-            TextField("Total items", text: self.$editOrderTotalItems)
-            
-            Button(action: {
-                
-                let newOrder = Order(brickLinkId: self.editOrderId, totalItems: self.editOrderTotalItems)
-                appDataStorage.saveOrder(newOrder)
-                
-                self.sheetPresented = false
-                self.editOrderId = ""
-                self.editOrderTotalItems = ""
-                
-            }, label: {
-                
-                Text("Add")
-            })
-            
-            Button(action: {
-                
-                self.sheetPresented = false
-                self.editOrderId = ""
-                self.editOrderTotalItems = ""
-                
-            }, label: {
-                
-                Text("Cancel")
-            })
-        }
     }
 }
 
