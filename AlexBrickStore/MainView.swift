@@ -14,31 +14,36 @@ struct MainView: View {
     
     var body: some View {
         
-        VStack {
+        NavigationView {
+            
+            VStack {
         
-            Button(action: {
+                Button(action: {
+                    
+                    self.sheetPresented = true
+                    
+                }, label: {
+                    
+                    Text("Add order")
+                })
                 
-                self.sheetPresented = true
+                let orders = appDataStorage.appData?.orders ?? []
+                if orders.isEmpty {
+                    
+                    Text("No orders")
+                    
+                } else {
                 
-            }, label: {
-                
-                Text("Add order")
-            })
-            
-            let orders = appDataStorage.appData?.orders ?? []
-            if orders.isEmpty {
-                
-                Text("No orders")
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
-            } else {
-            
-                ForEach(appDataStorage.appData?.orders ?? []) { order in
-                
-                    Text(order.id)
+                    ForEach(appDataStorage.appData?.orders ?? []) { order in
+                    
+                        NavigationLink(order.id, destination: OrderView(order: order))
+                    }
                 }
             }
+            
+            VStack {}
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: self.$sheetPresented) {
             
             TextField("Order id", text: self.$editOrderId)

@@ -14,6 +14,7 @@
 		2925D01C27C3EA77000B37AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2925D01A27C3EA77000B37AC /* Main.storyboard */; };
 		2925D02827C3EB80000B37AC /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02727C3EB80000B37AC /* AppData.swift */; };
 		2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */; };
+		2925D03127C3F238000B37AC /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03027C3F238000B37AC /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2925D01E27C3EA77000B37AC /* AlexBrickStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlexBrickStore.entitlements; sourceTree = "<group>"; };
 		2925D02727C3EB80000B37AC /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStorage.swift; sourceTree = "<group>"; };
+		2925D03027C3F238000B37AC /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				2925D01A27C3EA77000B37AC /* Main.storyboard */,
 				2925D01127C3EA6E000B37AC /* AppDelegate.swift */,
 				2925D01327C3EA6E000B37AC /* MainView.swift */,
+				2925D03027C3F238000B37AC /* OrderView.swift */,
 				2925D02727C3EB80000B37AC /* AppData.swift */,
 				2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
@@ -154,6 +157,7 @@
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
 				2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */,
+				2925D03127C3F238000B37AC /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
