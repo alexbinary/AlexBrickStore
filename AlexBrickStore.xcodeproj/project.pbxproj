@@ -55,12 +55,12 @@
 		2925D01027C3EA6E000B37AC /* AlexBrickStore */ = {
 			isa = PBXGroup;
 			children = (
-				2925D01127C3EA6E000B37AC /* AppDelegate.swift */,
-				2925D01327C3EA6E000B37AC /* ContentView.swift */,
-				2925D01527C3EA77000B37AC /* Assets.xcassets */,
-				2925D01A27C3EA77000B37AC /* Main.storyboard */,
 				2925D01D27C3EA77000B37AC /* Info.plist */,
 				2925D01E27C3EA77000B37AC /* AlexBrickStore.entitlements */,
+				2925D01527C3EA77000B37AC /* Assets.xcassets */,
+				2925D01A27C3EA77000B37AC /* Main.storyboard */,
+				2925D01127C3EA6E000B37AC /* AppDelegate.swift */,
+				2925D01327C3EA6E000B37AC /* ContentView.swift */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
 			);
 			path = AlexBrickStore;
