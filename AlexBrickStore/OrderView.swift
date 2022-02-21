@@ -6,6 +6,8 @@ import SwiftUI
 struct OrderView: View {
     
     
+    @EnvironmentObject var appDataStorage: AppDataStorage
+    
     @State var order: Order
     
     
@@ -14,6 +16,15 @@ struct OrderView: View {
         VStack {
         
             TextField("Order id", text: self.$order.id)
+            
+            Button(action: {
+                
+                appDataStorage.saveOrder(order)
+                
+            }, label: {
+                
+                Text("Save")
+            })
         }
     }
 }

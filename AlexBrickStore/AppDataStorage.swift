@@ -34,4 +34,16 @@ class AppDataStorage: ObservableObject {
         self.appData.orders.append(order)
         self.persistAppData()
     }
+    
+    
+    func saveOrder(_ order: Order) {
+        
+        if let idx = self.appData.orders.firstIndex(where: { $0.id == order.id }) {
+            self.appData.orders[idx] = order
+        } else {
+            self.appData.orders.append(order)
+        }
+        
+        self.persistAppData()
+    }
 }
