@@ -31,7 +31,7 @@ class AppDataStorage: ObservableObject {
     
     func saveOrder(_ order: Order) {
         
-        if let idx = self.appData.orders.firstIndex(where: { $0.id == order.id }) {
+        if let idx = self.appData.orders.firstIndex(where: { $0.internalId == order.internalId }) {
             self.appData.orders[idx] = order
         } else {
             self.appData.orders.append(order)

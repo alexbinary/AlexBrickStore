@@ -3,8 +3,15 @@ import Foundation
 
 
 
-struct Order: Codable, Identifiable {
+struct Order: Codable {
     
-    var id: String
+    var internalId: UUID = UUID()
+    var brickLinkId: String
     var totalItems: String
+}
+
+
+extension Order: Identifiable {
+    
+    var id: UUID { internalId }
 }

@@ -38,7 +38,7 @@ struct MainView: View {
                 
                     ForEach(appDataStorage.appData?.orders ?? []) { order in
                     
-                        NavigationLink(order.id, destination: OrderView(order: order))
+                        NavigationLink(order.brickLinkId, destination: OrderView(order: order))
                     }
                 }
             }
@@ -53,7 +53,7 @@ struct MainView: View {
             
             Button(action: {
                 
-                let newOrder = Order(id: self.editOrderId, totalItems: self.editOrderTotalItems)
+                let newOrder = Order(brickLinkId: self.editOrderId, totalItems: self.editOrderTotalItems)
                 appDataStorage.saveOrder(newOrder)
                 
                 self.sheetPresented = false

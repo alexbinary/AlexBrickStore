@@ -15,7 +15,7 @@ struct OrderView: View {
         
         VStack {
         
-            TextField("Order id", text: self.$order.id)
+            TextField("Order id", text: self.$order.brickLinkId)
             TextField("Total items", text: self.$order.totalItems)
             
             Button(action: {
@@ -36,6 +36,6 @@ struct OrderView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        OrderView(order: Order(id: "test id", totalItems: ""))
+        OrderView(order: Order(brickLinkId: "test id", totalItems: ""))
     }
 }
