@@ -15,6 +15,7 @@
 		2925D02827C3EB80000B37AC /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02727C3EB80000B37AC /* AppData.swift */; };
 		2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */; };
 		2925D03127C3F238000B37AC /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03027C3F238000B37AC /* OrderView.swift */; };
+		2925D03927C3F647000B37AC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03827C3F647000B37AC /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2925D02727C3EB80000B37AC /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStorage.swift; sourceTree = "<group>"; };
 		2925D03027C3F238000B37AC /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		2925D03827C3F647000B37AC /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				2925D01327C3EA6E000B37AC /* MainView.swift */,
 				2925D03027C3F238000B37AC /* OrderView.swift */,
 				2925D02727C3EB80000B37AC /* AppData.swift */,
+				2925D03827C3F647000B37AC /* Order.swift */,
 				2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2925D03927C3F647000B37AC /* Order.swift in Sources */,
 				2925D02827C3EB80000B37AC /* AppData.swift in Sources */,
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
