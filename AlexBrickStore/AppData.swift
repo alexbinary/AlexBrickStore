@@ -13,5 +13,5 @@ struct AppData: Codable {
 
 struct Order: Codable, Identifiable {
     
-    let id: String
+    var id: String
 }
