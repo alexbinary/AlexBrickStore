@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let appDataStorage = AppDataStorage()
         appDataStorage.loadAppData()
         
-        let contentView = ContentView()
+        let contentView = MainView()
             .environmentObject(appDataStorage)
         
         window = NSWindow(
