@@ -58,6 +58,7 @@ struct MainView: View {
                 
                 self.sheetPresented = false
                 self.editOrderId = ""
+                self.editOrderTotalItems = ""
                 
             }, label: {
                 
@@ -68,6 +69,7 @@ struct MainView: View {
                 
                 self.sheetPresented = false
                 self.editOrderId = ""
+                self.editOrderTotalItems = ""
                 
             }, label: {
                 
