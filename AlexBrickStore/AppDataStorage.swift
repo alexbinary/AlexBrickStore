@@ -25,7 +25,6 @@ class AppDataStorage: ObservableObject {
     func persistAppData(to url: URL = AppDataStorage.fileUrl) {
         
         try! JSONEncoder().encode(appData).write(to: url)
-        print("Saved app data to \(url)")
     }
     
     

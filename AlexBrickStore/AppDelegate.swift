@@ -13,6 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
     
+        print("Working dir is \(FileManager.default.currentDirectoryPath)")
+        
         let appDataStorage = AppDataStorage()
         appDataStorage.loadAppData()
         
