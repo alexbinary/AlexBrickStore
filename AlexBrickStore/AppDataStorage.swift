@@ -57,6 +57,18 @@ class AppDataStorage: ObservableObject {
     }
     
     
+    func saveStatsPeriod(_ statsPeriod: StatsPeriod) {
+        
+        if let idx = self.appData.statsPeriods.firstIndex(where: { $0.id == statsPeriod.id }) {
+            self.appData.statsPeriods[idx] = statsPeriod
+        } else {
+            self.appData.statsPeriods.append(statsPeriod)
+        }
+        
+        self.persistAppData()
+    }
+    
+    
     func appDataFromPreviousStorageModel(_ appDataPreviousStorageModel: AppData_PreviousStorageModel) -> AppData {
         
         var appData = AppData()
@@ -72,6 +84,8 @@ class AppDataStorage: ObservableObject {
                 shippingMyCost: orderPreviousStorageModel.shippingMyCost
             )
         }
+        
+        appData.statsPeriods = []
         
         return appData
     }
