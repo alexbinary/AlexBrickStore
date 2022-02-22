@@ -15,12 +15,12 @@ struct StatsView: View {
         
         VStack {
     
-            let shippingBilledValues = self.appDataStorage.appData.orders.map { Double($0.shippingBilled)! }
+            let shippingBilledValues = self.appDataStorage.appData.orders.compactMap { Double($0.shippingBilled) }
             let averageShippingBilled = shippingBilledValues.reduce(0.0, +) / Double(shippingBilledValues.count)
             
             Text("Average shipping billed: \(averageShippingBilled)")
             
-            let shippingMyCostValues = self.appDataStorage.appData.orders.map { Double($0.shippingMyCost)! }
+            let shippingMyCostValues = self.appDataStorage.appData.orders.compactMap { Double($0.shippingMyCost) }
             let averageShippingMyCost = shippingMyCostValues.reduce(0.0, +) / Double(shippingMyCostValues.count)
             
             Text("Average shipping my cost: \(averageShippingMyCost)")
