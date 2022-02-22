@@ -14,9 +14,9 @@ struct OrderView: View {
     var body: some View {
         
         VStack {
-        
+            
             TextField("Order id", text: self.$order.brickLinkId)
-            TextField("Order date", text: self.$order.orderDate)
+            DatePicker("Order date", selection: self.$order.orderDate)
             TextField("Total items", text: self.$order.totalItems)
             TextField("Shipping billed", text: self.$order.shippingBilled)
             TextField("Shipping my cost", text: self.$order.shippingMyCost)
@@ -39,6 +39,6 @@ struct OrderView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        OrderView(order: Order(brickLinkId: "test id", orderDate: "", totalItems: "", shippingBilled: "", shippingMyCost: ""))
+        OrderView(order: Order(brickLinkId: "test id", orderDate: Date(), totalItems: "", shippingBilled: "", shippingMyCost: ""))
     }
 }

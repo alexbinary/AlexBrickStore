@@ -66,7 +66,7 @@ class AppDataStorage: ObservableObject {
             return Order(
                 internalId: orderPreviousStorageModel.internalId,
                 brickLinkId: orderPreviousStorageModel.brickLinkId,
-                orderDate: "",
+                orderDate: Date(),
                 totalItems: orderPreviousStorageModel.totalItems,
                 shippingBilled: orderPreviousStorageModel.shippingBilled,
                 shippingMyCost: orderPreviousStorageModel.shippingMyCost
