@@ -23,27 +23,15 @@ class AppDataStorage: ObservableObject {
     
     func loadAppData() {
         
-        if let appDataVersionOnly = try? JSONDecoder().decode(AppData_VersionOnly.self, from: Data(contentsOf: Self.fileUrl)) {
+        let migrateFromPreviousStorageModel = false
+        if migrateFromPreviousStorageModel {
             
-            let storageVersion = appDataVersionOnly.version
-            if storageVersion == 1 {
-                
-                let appData_v1 = (try? JSONDecoder().decode(AppData_LegacyModel_v1.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData_LegacyModel_v1()
-                self.appData = self.appDataFromStorageModelLegacyV1(appData_v1)
-                
-            } else if storageVersion == 2 {
-                
-                let appData_v2 = (try? JSONDecoder().decode(AppData_LegacyModel_v2.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData_LegacyModel_v2()
-                self.appData = self.appDataFromStorageModelLegacyV2(appData_v2)
-                
-            } else if storageVersion == 3 {
-                
-                self.appData = (try? JSONDecoder().decode(AppData.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData()
-            }
+            let appDataPreviousStorageModel = (try? JSONDecoder().decode(AppData_PreviousStorageModel.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData_PreviousStorageModel()
+            self.appData = self.appDataFromPreviousStorageModel(appDataPreviousStorageModel)
             
         } else {
             
-            self.appData = AppData()
+            self.appData = (try? JSONDecoder().decode(AppData.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData()
         }
         
         self.persistAppData()
@@ -69,37 +57,19 @@ class AppDataStorage: ObservableObject {
     }
     
     
-    func appDataFromStorageModelLegacyV1(_ appDataLegacyModelV1: AppData_LegacyModel_v1) -> AppData {
+    func appDataFromPreviousStorageModel(_ appDataPreviousStorageModel: AppData_PreviousStorageModel) -> AppData {
         
         var appData = AppData()
         
-        appData.orders = appDataLegacyModelV1.orders.map { orderLegacyModelV1 in
+        appData.orders = appDataPreviousStorageModel.orders.map { orderPreviousStorageModel in
             
             return Order(
-                internalId: orderLegacyModelV1.internalId,
-                brickLinkId: orderLegacyModelV1.brickLinkId,
-                totalItems: orderLegacyModelV1.totalItems,
-                shippingBilled: "",
-                shippingMyCost: ""
-            )
-        }
-        
-        return appData
-    }
-    
-    
-    func appDataFromStorageModelLegacyV2(_ appDataLegacyModelV2: AppData_LegacyModel_v2) -> AppData {
-        
-        var appData = AppData()
-        
-        appData.orders = appDataLegacyModelV2.orders.map { orderLegacyModelV2 in
-            
-            return Order(
-                internalId: orderLegacyModelV2.internalId,
-                brickLinkId: orderLegacyModelV2.brickLinkId,
-                totalItems: orderLegacyModelV2.totalItems,
-                shippingBilled: orderLegacyModelV2.shippingBilled,
-                shippingMyCost: ""
+                internalId: orderPreviousStorageModel.internalId,
+                brickLinkId: orderPreviousStorageModel.brickLinkId,
+                orderDate: "",
+                totalItems: orderPreviousStorageModel.totalItems,
+                shippingBilled: orderPreviousStorageModel.shippingBilled,
+                shippingMyCost: orderPreviousStorageModel.shippingMyCost
             )
         }
         

@@ -3,9 +3,11 @@ import Foundation
 
 
 
-struct Order_LegacyModel_v1: Decodable {
+struct Order_PreviousStorageModel: Decodable {
     
     var internalId: UUID = UUID()
     var brickLinkId: String
     var totalItems: String
+    var shippingBilled: String
+    var shippingMyCost: String
 }
