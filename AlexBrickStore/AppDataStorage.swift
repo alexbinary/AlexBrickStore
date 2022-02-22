@@ -15,6 +15,12 @@ class AppDataStorage: ObservableObject {
     static let backupFileUrl: URL = URL(fileURLWithPath: baseFilePath.replacingOccurrences(of: ".json", with: "-\(DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium).replacingOccurrences(of: "/", with: "-").replacingOccurrences(of: ":", with: "-")).json"))
     
     
+    func backupExistingAppDataOnDisk() {
+        
+        try? Data(contentsOf: Self.fileUrl).write(to: Self.backupFileUrl)
+    }
+    
+    
     func loadAppData() {
         
         if let appDataVersionOnly = try? JSONDecoder().decode(AppData_VersionOnly.self, from: Data(contentsOf: Self.fileUrl)) {
@@ -35,13 +41,14 @@ class AppDataStorage: ObservableObject {
             self.appData = AppData()
         }
         
-        self.persistAppData(to: Self.backupFileUrl)
+        self.persistAppData()
     }
 
     
-    func persistAppData(to url: URL = AppDataStorage.fileUrl) {
+    func persistAppData() {
         
-        try! JSONEncoder().encode(appData).write(to: url)
+        self.backupExistingAppDataOnDisk()
+        try! JSONEncoder().encode(appData).write(to: Self.fileUrl)
     }
     
     
