@@ -20,6 +20,8 @@
 		29D9AE0427C535C400C626D1 /* AppData_VersionOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0327C535C400C626D1 /* AppData_VersionOnly.swift */; };
 		29D9AE0827C5389C00C626D1 /* AppData_LegacyModel_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0727C5389C00C626D1 /* AppData_LegacyModel_v1.swift */; };
 		29D9AE0D27C53D0900C626D1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0C27C53D0900C626D1 /* StatsView.swift */; };
+		29D9AE1027C53F8C00C626D1 /* Order_LegacyModel_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0F27C53F8C00C626D1 /* Order_LegacyModel_v2.swift */; };
+		29D9AE1327C53FBB00C626D1 /* AppData_LegacyModel_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE1227C53FBB00C626D1 /* AppData_LegacyModel_v2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		29D9AE0327C535C400C626D1 /* AppData_VersionOnly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_VersionOnly.swift; sourceTree = "<group>"; };
 		29D9AE0727C5389C00C626D1 /* AppData_LegacyModel_v1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_LegacyModel_v1.swift; sourceTree = "<group>"; };
 		29D9AE0C27C53D0900C626D1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		29D9AE0F27C53F8C00C626D1 /* Order_LegacyModel_v2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order_LegacyModel_v2.swift; sourceTree = "<group>"; };
+		29D9AE1227C53FBB00C626D1 /* AppData_LegacyModel_v2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_LegacyModel_v2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 				2925D03027C3F238000B37AC /* OrderView.swift */,
 				2925D02727C3EB80000B37AC /* AppData.swift */,
 				29D9AE0727C5389C00C626D1 /* AppData_LegacyModel_v1.swift */,
+				29D9AE1227C53FBB00C626D1 /* AppData_LegacyModel_v2.swift */,
 				29D9AE0327C535C400C626D1 /* AppData_VersionOnly.swift */,
 				2925D03827C3F647000B37AC /* Order.swift */,
+				29D9AE0F27C53F8C00C626D1 /* Order_LegacyModel_v2.swift */,
 				29D9AE0027C5359000C626D1 /* Order_LegacyModel_v1.swift */,
 				2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
@@ -174,8 +180,10 @@
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				29D9AE0127C5359000C626D1 /* Order_LegacyModel_v1.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
+				29D9AE1327C53FBB00C626D1 /* AppData_LegacyModel_v2.swift in Sources */,
 				29D9AE0D27C53D0900C626D1 /* StatsView.swift in Sources */,
 				29D9AE0427C535C400C626D1 /* AppData_VersionOnly.swift in Sources */,
+				29D9AE1027C53F8C00C626D1 /* Order_LegacyModel_v2.swift in Sources */,
 				2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */,
 				2925D03127C3F238000B37AC /* OrderView.swift in Sources */,
 			);

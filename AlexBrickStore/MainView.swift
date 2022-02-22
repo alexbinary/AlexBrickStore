@@ -23,7 +23,7 @@ struct MainView: View {
                     Text("Stats")
                 })
                 
-                NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "", shippingBilled: "")))
+                NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "", shippingBilled: "", shippingMyCost: "")))
                 
                 let orders = appDataStorage.appData?.orders ?? []
                 if orders.isEmpty {

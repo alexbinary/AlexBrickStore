@@ -33,6 +33,11 @@ class AppDataStorage: ObservableObject {
                 
             } else if storageVersion == 2 {
                 
+                let appData_v2 = (try? JSONDecoder().decode(AppData_LegacyModel_v2.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData_LegacyModel_v2()
+                self.appData = self.appDataFromStorageModelLegacyV2(appData_v2)
+                
+            } else if storageVersion == 3 {
+                
                 self.appData = (try? JSONDecoder().decode(AppData.self, from: Data(contentsOf: Self.fileUrl))) ?? AppData()
             }
             
@@ -74,7 +79,27 @@ class AppDataStorage: ObservableObject {
                 internalId: orderLegacyModelV1.internalId,
                 brickLinkId: orderLegacyModelV1.brickLinkId,
                 totalItems: orderLegacyModelV1.totalItems,
-                shippingBilled: ""
+                shippingBilled: "",
+                shippingMyCost: ""
+            )
+        }
+        
+        return appData
+    }
+    
+    
+    func appDataFromStorageModelLegacyV2(_ appDataLegacyModelV2: AppData_LegacyModel_v2) -> AppData {
+        
+        var appData = AppData()
+        
+        appData.orders = appDataLegacyModelV2.orders.map { orderLegacyModelV2 in
+            
+            return Order(
+                internalId: orderLegacyModelV2.internalId,
+                brickLinkId: orderLegacyModelV2.brickLinkId,
+                totalItems: orderLegacyModelV2.totalItems,
+                shippingBilled: orderLegacyModelV2.shippingBilled,
+                shippingMyCost: ""
             )
         }
         

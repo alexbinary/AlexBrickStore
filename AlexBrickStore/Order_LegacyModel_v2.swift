@@ -3,17 +3,10 @@ import Foundation
 
 
 
-struct Order: Codable {
+struct Order_LegacyModel_v2: Decodable {
     
     var internalId: UUID = UUID()
     var brickLinkId: String
     var totalItems: String
     var shippingBilled: String
-    var shippingMyCost: String
-}
-
-
-extension Order: Identifiable {
-    
-    var id: UUID { internalId }
 }

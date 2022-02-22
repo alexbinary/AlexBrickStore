@@ -6,6 +6,6 @@ import Foundation
 struct AppData: Codable {
 
     
-    var version: Int = 2
+    var version: Int = 3
     var orders: [Order] = []
 }
