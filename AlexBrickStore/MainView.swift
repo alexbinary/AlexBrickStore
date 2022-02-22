@@ -8,6 +8,8 @@ struct MainView: View {
     
     @EnvironmentObject var appDataStorage: AppDataStorage
     
+    @State var sheetPresented = false
+    
     
     var body: some View {
         
@@ -15,6 +17,12 @@ struct MainView: View {
             
             VStack {
         
+                Button(action: {
+                    self.sheetPresented = true
+                }, label: {
+                    Text("Stats")
+                })
+                
                 NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "", shippingBilled: "")))
                 
                 let orders = appDataStorage.appData?.orders ?? []
@@ -34,12 +42,16 @@ struct MainView: View {
             VStack {}
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .sheet(isPresented: self.$sheetPresented) {
+            StatsView()
+                .environmentObject(self.appDataStorage)
+        }
     }
 }
 
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     
     static var previews: some View {
         
