@@ -8,6 +8,7 @@ struct Order: Codable {
     var internalId: UUID = UUID()
     var brickLinkId: String
     var totalItems: String
+    var shippingBilled: String
 }
 
 

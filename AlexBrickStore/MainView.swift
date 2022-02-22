@@ -15,7 +15,7 @@ struct MainView: View {
             
             VStack {
         
-                NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "")))
+                NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", totalItems: "", shippingBilled: "")))
                 
                 let orders = appDataStorage.appData?.orders ?? []
                 if orders.isEmpty {
