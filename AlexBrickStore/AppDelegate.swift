@@ -15,11 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
         print("Working dir is \(FileManager.default.currentDirectoryPath)")
         
-        let appDataStorage = AppDataStorage()
-        appDataStorage.loadAppData()
+        let cloudStorageAgent = CloudStorageAgent()
+        cloudStorageAgent.start()
         
         let contentView = MainView()
-            .environmentObject(appDataStorage)
         
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
