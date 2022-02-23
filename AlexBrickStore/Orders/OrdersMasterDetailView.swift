@@ -17,6 +17,17 @@ struct OrdersMasterDetailView: View {
 
             VStack {
 
+                Button {
+                    
+                    let client = BrickLinkAPIClient(with: BrickLinkAPICredentials())
+                    client.getMyOrdersReceived { orders in
+                        self.appDataStorage.syncOrdersFromBrickLink(orders)
+                    }
+                    
+                } label: {
+                    Text("Sync")
+                }
+                
                 NavigationLink("Add order", destination: OrderDetailView(order: Order(brickLinkId: "", orderDate: Date(), totalItems: "", shippingBilled: "", shippingMyCost: "")))
                 
                 let orders = appDataStorage.appData?.orders ?? []

@@ -21,6 +21,9 @@
 		299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */; };
 		299DDBC627C669D50002A594 /* BrickLinkAPIAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */; };
 		299DDBCD27C66A7C0002A594 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 299DDBCC27C66A7C0002A594 /* CryptoSwift */; };
+		299DDBD227C66B190002A594 /* BrickLinkAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBD127C66B190002A594 /* BrickLinkAPIClient.swift */; };
+		299DDBD527C66BF40002A594 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBD427C66BF40002A594 /* APIResponse.swift */; };
+		299DDBD827C66CA90002A594 /* BrickLinkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBD727C66CA90002A594 /* BrickLinkOrder.swift */; };
 		29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */; };
 		29D9AE0827C5389C00C626D1 /* AppData_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */; };
 		29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */; };
@@ -45,6 +48,9 @@
 		299DDBBC27C667230002A594 /* StatsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDetailView.swift; sourceTree = "<group>"; };
 		299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPICredentials.swift; sourceTree = "<group>"; };
 		299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPIAuth.swift; sourceTree = "<group>"; };
+		299DDBD127C66B190002A594 /* BrickLinkAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPIClient.swift; sourceTree = "<group>"; };
+		299DDBD427C66BF40002A594 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		299DDBD727C66CA90002A594 /* BrickLinkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkOrder.swift; sourceTree = "<group>"; };
 		29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order_PreviousStorageModel.swift; sourceTree = "<group>"; };
 		29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_PreviousStorageModel.swift; sourceTree = "<group>"; };
 		29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsMasterDetailView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 			children = (
 				299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */,
 				299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */,
+				299DDBD127C66B190002A594 /* BrickLinkAPIClient.swift */,
+				299DDBD427C66BF40002A594 /* APIResponse.swift */,
+				299DDBD727C66CA90002A594 /* BrickLinkOrder.swift */,
 			);
 			path = BrickLinkAPI;
 			sourceTree = "<group>";
@@ -228,11 +237,14 @@
 				2925D03927C3F647000B37AC /* Order.swift in Sources */,
 				2925D02827C3EB80000B37AC /* AppData.swift in Sources */,
 				29D9AE0827C5389C00C626D1 /* AppData_PreviousStorageModel.swift in Sources */,
+				299DDBD527C66BF40002A594 /* APIResponse.swift in Sources */,
+				299DDBD227C66B190002A594 /* BrickLinkAPIClient.swift in Sources */,
 				299DDBC627C669D50002A594 /* BrickLinkAPIAuth.swift in Sources */,
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				29D9AE1F27C54B7100C626D1 /* StatsPeriodView.swift in Sources */,
 				29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */,
 				299DDBBD27C667230002A594 /* StatsDetailView.swift in Sources */,
+				299DDBD827C66CA90002A594 /* BrickLinkOrder.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
 				299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */,
 				29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */,

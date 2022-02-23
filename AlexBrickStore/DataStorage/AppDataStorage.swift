@@ -103,4 +103,21 @@ class AppDataStorage: ObservableObject {
         
         return appData
     }
+    
+    
+    func syncOrdersFromBrickLink(_ brickLinkOrders: [BrickLinkOrder]) {
+        
+        for brickLinkOrder in brickLinkOrders {
+            
+            let order = Order(
+                brickLinkId: brickLinkOrder.id,
+                orderDate: brickLinkOrder.dateOrdered,
+                totalItems: "",
+                shippingBilled: "",
+                shippingMyCost: ""
+            )
+            
+            self.saveOrder(order)
+        }
+    }
 }
