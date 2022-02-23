@@ -60,15 +60,15 @@ struct StatsView: View {
                         let averageShippingMyCost = shippingMyCostValues.reduce(0.0, +) / Double(shippingMyCostValues.count)
                         
                         Text("Average shipping my cost: \(averageShippingMyCost)")
-                        
-                        Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }, label: {
-                            Text("Close")
-                        })
                     }
                 }
             }
+            
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Close")
+            })
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: self.$sheetPresented) {
