@@ -8,6 +8,7 @@ struct MainView: View {
     
     @EnvironmentObject var appDataStorage: AppDataStorage
     
+    @State var selectedOrderId: UUID? = nil
     @State var sheetPresented = false
     
     
@@ -24,7 +25,7 @@ struct MainView: View {
                 })
 
                 NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", orderDate: Date(), totalItems: "", shippingBilled: "", shippingMyCost: "")))
-
+                
                 let orders = appDataStorage.appData?.orders ?? []
                 if orders.isEmpty {
 
@@ -32,14 +33,32 @@ struct MainView: View {
 
                 } else {
 
-                    ForEach(orders) { order in
+                    List(orders) { order in
 
-                        NavigationLink(order.brickLinkId, destination: OrderView(order: order))
+                        NavigationLink(
+                            destination: OrderView(order: order),
+                            tag: order.internalId,
+                            selection: self.$selectedOrderId
+                        ) {
+                            HStack {
+                                Text(order.brickLinkId)
+                                Spacer()
+                                Button {
+                                    self.appDataStorage.deleteOrder(order)
+                                    self.selectedOrderId = (appDataStorage.appData?.orders ?? []).first?.internalId
+                                } label: {
+                                    Text("Delete")
+                                }
+                            }
+                        }
                     }
+                    .frame(minHeight: 500)
                 }
             }
+            .frame(width: 300)
 
-            VStack {}
+            Text("No order selected")
+                .frame(maxWidth: .infinity)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .sheet(isPresented: self.$sheetPresented) {

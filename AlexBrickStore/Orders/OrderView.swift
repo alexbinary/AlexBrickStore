@@ -31,15 +31,6 @@ struct OrderView: View {
                 
                 Text("Save")
             })
-            
-            Button(action: {
-                
-                appDataStorage.deleteOrder(order)
-                
-            }, label: {
-                
-                Text("Delete order")
-            })
         }
     }
 }
