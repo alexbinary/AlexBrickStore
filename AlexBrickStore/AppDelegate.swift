@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
         print("Working dir is \(FileManager.default.currentDirectoryPath)")
         
-        let cloudStorageAgent = CloudStorageAgent()
+        let cloudStorageAgent = StorageAgent()
         cloudStorageAgent.start()
         
         let contentView = MainView()

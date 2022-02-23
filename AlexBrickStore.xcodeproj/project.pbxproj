@@ -12,7 +12,7 @@
 		2925D01627C3EA77000B37AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2925D01527C3EA77000B37AC /* Assets.xcassets */; };
 		2925D01927C3EA77000B37AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2925D01827C3EA77000B37AC /* Preview Assets.xcassets */; };
 		2925D01C27C3EA77000B37AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2925D01A27C3EA77000B37AC /* Main.storyboard */; };
-		2925D02C27C3EBBB000B37AC /* CloudStorageAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02B27C3EBBB000B37AC /* CloudStorageAgent.swift */; };
+		2925D02C27C3EBBB000B37AC /* StorageAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02B27C3EBBB000B37AC /* StorageAgent.swift */; };
 		2961890327C6868B0019BE8F /* bricklinktestdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 2961890227C6868B0019BE8F /* bricklinktestdata.json */; };
 		299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */; };
 		299DDBC627C669D50002A594 /* BrickLinkAPIAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */; };
@@ -31,7 +31,7 @@
 		2925D01B27C3EA77000B37AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2925D01D27C3EA77000B37AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2925D01E27C3EA77000B37AC /* AlexBrickStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlexBrickStore.entitlements; sourceTree = "<group>"; };
-		2925D02B27C3EBBB000B37AC /* CloudStorageAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageAgent.swift; sourceTree = "<group>"; };
+		2925D02B27C3EBBB000B37AC /* StorageAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAgent.swift; sourceTree = "<group>"; };
 		2961890227C6868B0019BE8F /* bricklinktestdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = bricklinktestdata.json; path = AlexBrickStore/bricklinktestdata.json; sourceTree = SOURCE_ROOT; };
 		299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPICredentials.swift; sourceTree = "<group>"; };
 		299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPIAuth.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				2925D01327C3EA6E000B37AC /* MainView.swift */,
 				2961890227C6868B0019BE8F /* bricklinktestdata.json */,
 				299DDBBF27C669980002A594 /* BrickLinkAPI */,
-				299DA2DF27C62B95003460ED /* CloudStorage */,
+				299DA2DF27C62B95003460ED /* Storage */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
 			);
 			path = AlexBrickStore;
@@ -93,12 +93,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		299DA2DF27C62B95003460ED /* CloudStorage */ = {
+		299DA2DF27C62B95003460ED /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				2925D02B27C3EBBB000B37AC /* CloudStorageAgent.swift */,
+				2925D02B27C3EBBB000B37AC /* StorageAgent.swift */,
 			);
-			path = CloudStorage;
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		299DDBBF27C669980002A594 /* BrickLinkAPI */ = {
@@ -197,7 +197,7 @@
 				299DDBD827C66CA90002A594 /* BrickLinkOrder.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
 				299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */,
-				2925D02C27C3EBBB000B37AC /* CloudStorageAgent.swift in Sources */,
+				2925D02C27C3EBBB000B37AC /* StorageAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
