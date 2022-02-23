@@ -35,6 +35,24 @@ class StorageAgent {
             print("[Connection] Closing connection")
             sqlite3_close(connectionPointer)
         }
+        
+        let createTableOrderQueryString = """
+            CREATE TABLE IF NOT EXISTS BLOrder(
+                Id VARCHAR(255) PRIMARY KEY NOT NULL
+            );
+            """
+        
+        var createTableOrderPointer: OpaquePointer?
+          
+        guard sqlite3_prepare_v2(connectionPointer, createTableOrderQueryString, -1, &createTableOrderPointer, nil) == SQLITE_OK else {
+            fatalError("sqlite3_prepare_v2() failed. SQLite error: \(errorMessage(from: connectionPointer) ?? "")")
+        }
+        guard sqlite3_step(createTableOrderPointer) == SQLITE_DONE else {
+            fatalError("sqlite3_step() failed. SQLite error: \(errorMessage(from: connectionPointer) ?? "")")
+        }
+        print("Created table Order")
+            
+        sqlite3_finalize(createTableOrderPointer)
     }
     
     
