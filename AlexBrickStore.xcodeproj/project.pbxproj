@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,9 @@
 		2925D03927C3F647000B37AC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03827C3F647000B37AC /* Order.swift */; };
 		299DDBB727C6662D0002A594 /* OrdersMasterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBB627C6662D0002A594 /* OrdersMasterDetailView.swift */; };
 		299DDBBD27C667230002A594 /* StatsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBBC27C667230002A594 /* StatsDetailView.swift */; };
+		299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */; };
+		299DDBC627C669D50002A594 /* BrickLinkAPIAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */; };
+		299DDBCD27C66A7C0002A594 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 299DDBCC27C66A7C0002A594 /* CryptoSwift */; };
 		29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */; };
 		29D9AE0827C5389C00C626D1 /* AppData_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */; };
 		29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */; };
@@ -40,6 +43,8 @@
 		2925D03827C3F647000B37AC /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		299DDBB627C6662D0002A594 /* OrdersMasterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersMasterDetailView.swift; sourceTree = "<group>"; };
 		299DDBBC27C667230002A594 /* StatsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDetailView.swift; sourceTree = "<group>"; };
+		299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPICredentials.swift; sourceTree = "<group>"; };
+		299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickLinkAPIAuth.swift; sourceTree = "<group>"; };
 		29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order_PreviousStorageModel.swift; sourceTree = "<group>"; };
 		29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_PreviousStorageModel.swift; sourceTree = "<group>"; };
 		29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsMasterDetailView.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299DDBCD27C66A7C0002A594 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,7 @@
 				2925D01127C3EA6E000B37AC /* AppDelegate.swift */,
 				2925D01327C3EA6E000B37AC /* MainView.swift */,
 				2925D02727C3EB80000B37AC /* AppData.swift */,
+				299DDBBF27C669980002A594 /* BrickLinkAPI */,
 				299DA2E027C62BBB003460ED /* Orders */,
 				299DA2E127C62BD9003460ED /* Stats */,
 				299DA2DF27C62B95003460ED /* DataStorage */,
@@ -131,6 +138,15 @@
 			path = Stats;
 			sourceTree = "<group>";
 		};
+		299DDBBF27C669980002A594 /* BrickLinkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				299DDBC227C669BB0002A594 /* BrickLinkAPICredentials.swift */,
+				299DDBC527C669D50002A594 /* BrickLinkAPIAuth.swift */,
+			);
+			path = BrickLinkAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +163,9 @@
 			dependencies = (
 			);
 			name = AlexBrickStore;
+			packageProductDependencies = (
+				299DDBCC27C66A7C0002A594 /* CryptoSwift */,
+			);
 			productName = AlexBrickStore;
 			productReference = 2925D00E27C3EA6E000B37AC /* AlexBrickStore.app */;
 			productType = "com.apple.product-type.application";
@@ -174,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 2925D00527C3EA6E000B37AC;
+			packageReferences = (
+				299DDBCB27C66A7C0002A594 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = 2925D00F27C3EA6E000B37AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,11 +228,13 @@
 				2925D03927C3F647000B37AC /* Order.swift in Sources */,
 				2925D02827C3EB80000B37AC /* AppData.swift in Sources */,
 				29D9AE0827C5389C00C626D1 /* AppData_PreviousStorageModel.swift in Sources */,
+				299DDBC627C669D50002A594 /* BrickLinkAPIAuth.swift in Sources */,
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				29D9AE1F27C54B7100C626D1 /* StatsPeriodView.swift in Sources */,
 				29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */,
 				299DDBBD27C667230002A594 /* StatsDetailView.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
+				299DDBC327C669BB0002A594 /* BrickLinkAPICredentials.swift in Sources */,
 				29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */,
 				2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */,
 				2925D03127C3F238000B37AC /* OrderDetailView.swift in Sources */,
@@ -412,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		299DDBCB27C66A7C0002A594 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		299DDBCC27C66A7C0002A594 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 299DDBCB27C66A7C0002A594 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2925D00627C3EA6E000B37AC /* Project object */;
 }
