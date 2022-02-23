@@ -76,6 +76,13 @@ class AppDataStorage: ObservableObject {
     }
     
     
+    func deleteStatsPeriod(_ statsPeriod: StatsPeriod) {
+        
+        self.appData.statsPeriods.removeAll(where: { $0.id == statsPeriod.id })
+        self.persistAppData()
+    }
+    
+    
     func appDataFromPreviousStorageModel(_ appDataPreviousStorageModel: AppData_PreviousStorageModel) -> AppData {
         
         var appData = AppData()

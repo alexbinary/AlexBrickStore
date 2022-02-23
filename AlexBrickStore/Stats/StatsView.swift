@@ -48,6 +48,11 @@ struct StatsView: View {
                         } label: {
                             Text("Edit")
                         }
+                        Button {
+                            self.appDataStorage.deleteStatsPeriod(statsPeriod)
+                        } label: {
+                            Text("Delete")
+                        }
 
                         let orders = self.appDataStorage.appData.orders.filter { $0.orderDate >= statsPeriod.dateStart && $0.orderDate <= statsPeriod.dateEnd }
                         
