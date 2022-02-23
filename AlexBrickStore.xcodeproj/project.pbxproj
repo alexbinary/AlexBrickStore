@@ -79,15 +79,10 @@
 				2925D01A27C3EA77000B37AC /* Main.storyboard */,
 				2925D01127C3EA6E000B37AC /* AppDelegate.swift */,
 				2925D01327C3EA6E000B37AC /* MainView.swift */,
-				29D9AE0C27C53D0900C626D1 /* StatsView.swift */,
-				29D9AE1B27C54A5200C626D1 /* StatsPeriod.swift */,
-				2925D03027C3F238000B37AC /* OrderView.swift */,
-				29D9AE1E27C54B7100C626D1 /* StatsPeriodView.swift */,
 				2925D02727C3EB80000B37AC /* AppData.swift */,
-				29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */,
-				2925D03827C3F647000B37AC /* Order.swift */,
-				29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */,
-				2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */,
+				299DA2E027C62BBB003460ED /* Orders */,
+				299DA2E127C62BD9003460ED /* Stats */,
+				299DA2DF27C62B95003460ED /* DataStorage */,
 				2925D01727C3EA77000B37AC /* Preview Content */,
 			);
 			path = AlexBrickStore;
@@ -99,6 +94,35 @@
 				2925D01827C3EA77000B37AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		299DA2DF27C62B95003460ED /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */,
+				29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */,
+				29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		299DA2E027C62BBB003460ED /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				2925D03827C3F647000B37AC /* Order.swift */,
+				2925D03027C3F238000B37AC /* OrderView.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		299DA2E127C62BD9003460ED /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				29D9AE1B27C54A5200C626D1 /* StatsPeriod.swift */,
+				29D9AE1E27C54B7100C626D1 /* StatsPeriodView.swift */,
+				29D9AE0C27C53D0900C626D1 /* StatsView.swift */,
+			);
+			path = Stats;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
