@@ -6,6 +6,8 @@ import SwiftUI
 struct OrderView: View {
     
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject var appDataStorage: AppDataStorage
     
     @State var order: Order
@@ -28,6 +30,15 @@ struct OrderView: View {
             }, label: {
                 
                 Text("Save")
+            })
+            
+            Button(action: {
+                
+                appDataStorage.deleteOrder(order)
+                
+            }, label: {
+                
+                Text("Delete order")
             })
         }
     }

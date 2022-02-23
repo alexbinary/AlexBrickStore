@@ -57,6 +57,13 @@ class AppDataStorage: ObservableObject {
     }
     
     
+    func deleteOrder(_ order: Order) {
+        
+        self.appData.orders.removeAll(where: { $0.internalId == order.internalId })
+        self.persistAppData()
+    }
+    
+    
     func saveStatsPeriod(_ statsPeriod: StatsPeriod) {
         
         if let idx = self.appData.statsPeriods.firstIndex(where: { $0.id == statsPeriod.id }) {
