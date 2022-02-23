@@ -32,13 +32,3 @@ struct StatsPeriodView: View {
         }
     }
 }
-
-
-
-struct StatsPeriodView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        StatsPeriodView()
-    }
-}

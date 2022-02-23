@@ -32,13 +32,3 @@ struct OrderView: View {
         }
     }
 }
-
-
-
-struct OrderView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        OrderView(order: Order(brickLinkId: "test id", orderDate: Date(), totalItems: "", shippingBilled: "", shippingMyCost: ""))
-    }
-}
