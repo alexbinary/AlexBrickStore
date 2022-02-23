@@ -14,11 +14,13 @@
 		2925D01C27C3EA77000B37AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2925D01A27C3EA77000B37AC /* Main.storyboard */; };
 		2925D02827C3EB80000B37AC /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02727C3EB80000B37AC /* AppData.swift */; };
 		2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */; };
-		2925D03127C3F238000B37AC /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03027C3F238000B37AC /* OrderView.swift */; };
+		2925D03127C3F238000B37AC /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03027C3F238000B37AC /* OrderDetailView.swift */; };
 		2925D03927C3F647000B37AC /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2925D03827C3F647000B37AC /* Order.swift */; };
+		299DDBB727C6662D0002A594 /* OrdersMasterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBB627C6662D0002A594 /* OrdersMasterDetailView.swift */; };
+		299DDBBD27C667230002A594 /* StatsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299DDBBC27C667230002A594 /* StatsDetailView.swift */; };
 		29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */; };
 		29D9AE0827C5389C00C626D1 /* AppData_PreviousStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */; };
-		29D9AE0D27C53D0900C626D1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0C27C53D0900C626D1 /* StatsView.swift */; };
+		29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */; };
 		29D9AE1C27C54A5200C626D1 /* StatsPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE1B27C54A5200C626D1 /* StatsPeriod.swift */; };
 		29D9AE1F27C54B7100C626D1 /* StatsPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D9AE1E27C54B7100C626D1 /* StatsPeriodView.swift */; };
 /* End PBXBuildFile section */
@@ -34,11 +36,13 @@
 		2925D01E27C3EA77000B37AC /* AlexBrickStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlexBrickStore.entitlements; sourceTree = "<group>"; };
 		2925D02727C3EB80000B37AC /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		2925D02B27C3EBBB000B37AC /* AppDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStorage.swift; sourceTree = "<group>"; };
-		2925D03027C3F238000B37AC /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		2925D03027C3F238000B37AC /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		2925D03827C3F647000B37AC /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		299DDBB627C6662D0002A594 /* OrdersMasterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersMasterDetailView.swift; sourceTree = "<group>"; };
+		299DDBBC27C667230002A594 /* StatsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDetailView.swift; sourceTree = "<group>"; };
 		29D9AE0027C5359000C626D1 /* Order_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order_PreviousStorageModel.swift; sourceTree = "<group>"; };
 		29D9AE0727C5389C00C626D1 /* AppData_PreviousStorageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData_PreviousStorageModel.swift; sourceTree = "<group>"; };
-		29D9AE0C27C53D0900C626D1 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsMasterDetailView.swift; sourceTree = "<group>"; };
 		29D9AE1B27C54A5200C626D1 /* StatsPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPeriod.swift; sourceTree = "<group>"; };
 		29D9AE1E27C54B7100C626D1 /* StatsPeriodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsPeriodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				2925D03827C3F647000B37AC /* Order.swift */,
-				2925D03027C3F238000B37AC /* OrderView.swift */,
+				299DDBB627C6662D0002A594 /* OrdersMasterDetailView.swift */,
+				2925D03027C3F238000B37AC /* OrderDetailView.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -119,8 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				29D9AE1B27C54A5200C626D1 /* StatsPeriod.swift */,
+				29D9AE0C27C53D0900C626D1 /* StatsMasterDetailView.swift */,
+				299DDBBC27C667230002A594 /* StatsDetailView.swift */,
 				29D9AE1E27C54B7100C626D1 /* StatsPeriodView.swift */,
-				29D9AE0C27C53D0900C626D1 /* StatsView.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299DDBB727C6662D0002A594 /* OrdersMasterDetailView.swift in Sources */,
 				29D9AE1C27C54A5200C626D1 /* StatsPeriod.swift in Sources */,
 				2925D03927C3F647000B37AC /* Order.swift in Sources */,
 				2925D02827C3EB80000B37AC /* AppData.swift in Sources */,
@@ -202,10 +209,11 @@
 				2925D01427C3EA6E000B37AC /* MainView.swift in Sources */,
 				29D9AE1F27C54B7100C626D1 /* StatsPeriodView.swift in Sources */,
 				29D9AE0127C5359000C626D1 /* Order_PreviousStorageModel.swift in Sources */,
+				299DDBBD27C667230002A594 /* StatsDetailView.swift in Sources */,
 				2925D01227C3EA6E000B37AC /* AppDelegate.swift in Sources */,
-				29D9AE0D27C53D0900C626D1 /* StatsView.swift in Sources */,
+				29D9AE0D27C53D0900C626D1 /* StatsMasterDetailView.swift in Sources */,
 				2925D02C27C3EBBB000B37AC /* AppDataStorage.swift in Sources */,
-				2925D03127C3F238000B37AC /* OrderView.swift in Sources */,
+				2925D03127C3F238000B37AC /* OrderDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

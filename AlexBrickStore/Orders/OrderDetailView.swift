@@ -3,7 +3,7 @@ import SwiftUI
 
 
 
-struct OrderView: View {
+struct OrderDetailView: View {
     
     
     @Environment(\.presentationMode) var presentationMode
