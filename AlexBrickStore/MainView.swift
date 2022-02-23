@@ -14,31 +14,31 @@ struct MainView: View {
     var body: some View {
         
         NavigationView {
-            
+
             VStack {
-        
+
                 Button(action: {
                     self.sheetPresented = true
                 }, label: {
                     Text("Stats")
                 })
-                
+
                 NavigationLink("Add order", destination: OrderView(order: Order(brickLinkId: "", orderDate: Date(), totalItems: "", shippingBilled: "", shippingMyCost: "")))
-                
+
                 let orders = appDataStorage.appData?.orders ?? []
                 if orders.isEmpty {
-                    
+
                     Text("No orders")
-                    
+
                 } else {
-                
-                    ForEach(appDataStorage.appData?.orders ?? []) { order in
-                    
+
+                    ForEach(orders) { order in
+
                         NavigationLink(order.brickLinkId, destination: OrderView(order: order))
                     }
                 }
             }
-            
+
             VStack {}
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
